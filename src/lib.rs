@@ -27,7 +27,11 @@ fn init(_: Url, orders: &mut impl Orders<Msg>) -> Model {
         .addTo(&map);
 
         let on_move = Closure::wrap(
+            // This causes runtime errors:
             Box::new(move || app.update(msg_mapper(Msg::Increment))) as Box<dyn FnMut()>
+
+            // This works fine:
+            // Box::new(|| log!("on_move")) as Box<dyn FnMut()>,
         );
 
         map.on("movestart", on_move.as_ref());
