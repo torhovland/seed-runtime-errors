@@ -1,6 +1,7 @@
 # Seed runtime errors
 
-This repo contains a reproducible sample that triggers runtime errors in a Seed app.
+This repo contains a reproducible sample that triggers runtime errors in a Seed app. This has been reported as an issue
+at https://github.com/seed-rs/seed/issues/636.
 
 ## Building and running
 
